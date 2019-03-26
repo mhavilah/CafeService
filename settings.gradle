@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url RTTA_MAVEN_REPO
+        }
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'CafeService'

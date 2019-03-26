@@ -1,0 +1,12 @@
+{
+  "orderID": "{{randomValue length=5 type='NUMERIC'}}",
+  "details" :[{
+    "0": {
+      "product": "espresso",
+      "amount": 1,
+      "price" : "3.00"
+    }
+  }],
+  "total": "3.00",
+  "url": "http:\/\/localhost:8888\/order/{{jsonPath response.body '$.orderID'}}"
+}

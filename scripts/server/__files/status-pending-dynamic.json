@@ -1,0 +1,5 @@
+{
+  "orderID": "{{request.requestLine.pathSegments.[1]}}",
+  "status":"PENDING",
+  "timeOfOrder": "{{now offset='-2 minutes' timezone='Australia/Sydney' format='yyyy-MM-dd\\'T\\'HH:mm:ss.SSSXXX'}}"
+}

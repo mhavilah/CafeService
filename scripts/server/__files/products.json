@@ -1,0 +1,21 @@
+{
+  "products": [{
+    "0": {
+      "name": "latte",
+      "price": "4.00"
+    }
+  },
+    {
+      "1": {
+        "name": "mocha",
+        "price": "4.50"
+      }
+    },
+    {
+      "2": {
+        "name": "espresso",
+        "price": "3.00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "request" : {
+    "method": "POST",
+    "url": "/order"
+  },
+  "response": {
+    "status": 201,
+    "headers": {
+      "Content-Type":"application/json",
+      "Cache-control":"no-cache"
+    },
+    "statusMessage": "Order created",
+    "transformers": ["response-template"],
+    "bodyFileName": "order-confirmation-static.json"
+  }
+}

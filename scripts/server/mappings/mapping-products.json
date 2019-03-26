@@ -1,0 +1,15 @@
+{
+  "request" : {
+    "method": "GET",
+    "urlPathPattern": "/products"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type":"application/json",
+      "Cache-control":"no-cache"
+    },
+    "statusMessage": "Products sent",
+    "bodyFileName": "products.json"
+  }
+}

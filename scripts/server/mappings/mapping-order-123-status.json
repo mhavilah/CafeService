@@ -1,0 +1,15 @@
+{
+  "request" : {
+    "method": "GET",
+    "urlPathPattern": "/order/123/status"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type":"application/json",
+      "Cache-control":"no-cache"
+    },
+    "statusMessage": "Order status 123 sent",
+    "bodyFileName": "status-pending-static.json"
+  }
+}

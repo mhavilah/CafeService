@@ -1,0 +1,22 @@
+{
+  "order": [
+    {
+      "0": {
+        "product": "espresso",
+        "amount": 1
+      }
+    },
+    {
+      "1": {
+        "name": "latte",
+        "amount": 2
+      }
+    },
+    {
+      "2": {
+        "name": "mocha",
+        "amount": 3
+      }
+    }
+  ]
+}

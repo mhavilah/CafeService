@@ -1,0 +1,12 @@
+{
+  "orderID": "123",
+  "details" :[{
+    "0": {
+      "product": "espresso",
+      "amount": 1,
+      "price" : "3.00"
+    }
+  }],
+  "total": "3.00",
+  "url": "http:\/\/localhost:8888\/order\/123\/status"
+}

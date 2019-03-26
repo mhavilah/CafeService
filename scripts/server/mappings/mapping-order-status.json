@@ -1,0 +1,15 @@
+{
+  "request" : {
+    "method": "GET",
+    "urlPathPattern": "/order/.*"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type":"application/json",
+      "Cache-control":"no-cache"
+    },
+    "statusMessage": "Generalised Order status sent",
+    "bodyFileName": "status-pending-dynamic.json"
+  }
+}
