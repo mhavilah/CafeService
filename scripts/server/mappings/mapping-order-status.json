@@ -1,7 +1,7 @@
 {
   "request" : {
     "method": "GET",
-    "urlPathPattern": "/order/.*"
+    "urlPathPattern": "/order/[0-9]*$"
   },
   "response": {
     "status": 200,
@@ -10,6 +10,7 @@
       "Cache-control":"no-cache"
     },
     "statusMessage": "Generalised Order status sent",
+    "transformers": ["response-template"],
     "bodyFileName": "status-pending-dynamic.json"
   }
 }

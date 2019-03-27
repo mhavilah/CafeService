@@ -1,7 +1,7 @@
 {
   "request" : {
     "method": "GET",
-    "urlPathPattern": "/order/123/status"
+    "url": "/order/123/status"
   },
   "response": {
     "status": 200,

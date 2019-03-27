@@ -8,5 +8,5 @@
     }
   }],
   "total": "3.00",
-  "url": "http:\/\/localhost:8888\/order/{{jsonPath response.body '$.orderID'}}"
+  "url": "http://localhost:8888/order/{{jsonPath response.body '$.orderID'}}"
 }
