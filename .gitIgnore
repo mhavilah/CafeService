@@ -5,6 +5,7 @@ scripts/client/queryPayload.json
 # https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
 
 # User-specific stuff
+.idea/workspace.xml
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
