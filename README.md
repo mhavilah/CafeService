@@ -41,7 +41,7 @@ choco install jq
 
 ### Proxying Request Sequence
 
-!(docs/Wiremock-proxying-seq.png?raw=true)
+![Proxying Sequence](docs/Wiremock-proxying-seq.png?raw=true "Wiremock Proxying")
 
 ### Sample Proxy Session
 
