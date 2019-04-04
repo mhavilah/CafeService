@@ -1,0 +1,20 @@
+#
+# https://www.websequencediagrams.com/
+#
+title Wiremock Proxying
+
+Application->Wiremock: HTTP GET /weather
+Wiremock->Wiremock: Record Mapping URL
+note right of Wiremock
+   Mapping Config
+end note
+
+Wiremock->Weather Service API: HTTP GET /weather
+Weather Service API->Wiremock: weather response
+
+Wiremock->Wiremock: Save Weather Response Content
+note right of Wiremock
+    Response Content File
+end note
+
+Wiremock->Application: weather response
