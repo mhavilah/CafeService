@@ -18,7 +18,7 @@
 # Note:
 # Requires an API key to have been setup
 # at:
-# https://www.willyweather.com.au/account/login.html
+# https://www.willyweather.com.au/info/api.html
 #
 # Put the key in the setAPIKeyEnv.sh script
 #

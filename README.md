@@ -85,7 +85,7 @@ $ ./startProxy.sh
 
 OK - Lets Proxy the Willy Weather API 
 **Note:**
-API Keys are available at: [https://www.willyweather.com.au/account/login.htm]
+API Keys are available at: [https://www.willyweather.com.au/info/api.html]
 
 ```
 $ ./startProxy.sh 9000 https://api.willyweather.com.au/v2 &
