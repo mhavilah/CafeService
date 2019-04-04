@@ -8,7 +8,7 @@ TODO TODO
 ## Wiremock Proxy Example
 
 The following illustrates the use of the Wiremock Proxy with a cloud based API
-at WilyWeather (www.wilyweather.com.au).
+at WillyWeather (www.willyweather.com.au).
 
 Some helper scripts have been provided to:
 - setup the API Key in the local environment
