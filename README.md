@@ -25,15 +25,23 @@ These scripts were written on OSX but should run in any bash environment.
 
 The following tools are required:
 - curl
-- jq
+- jq [https://stedolan.github.io/jq/download/]
 - Wiremock (included)
 
-On Mac OSX, the former two tools can be easily installed via **brew**.
+On Mac OSX, the former two tools can be easily installed via **brew** [http://brew.sh]
+```
+brew install jq 
+```
 
-On Linux, apt-get installer or yum package manager are your best bet.
+On Linux, apt-get installer or yum package manager are your best bet:
+```
+sudo apt-get install jq
+```
 
 For Windows, Chocolately installer is recommended (https://chocolatey.org/).
-
+```
+choco install jq
+```
 
 
 First, for convenience, setup the API Key in the local environment
