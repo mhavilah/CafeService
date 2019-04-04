@@ -47,7 +47,7 @@ First, for convenience, setup the API Key in the local environment
 $ ./setAPIKeyEnv.sh 
 ```
 
-Next, Check the usage of the proxy runner.. Check the usage of the proxy runner..
+Next, Check the usage of the proxy runner.. 
 
 ```
 $ ./startProxy.sh 
@@ -83,7 +83,9 @@ $ ./startProxy.sh
 ############################
 ```
 
-OK - Lets Proxy the Wily Weather API
+OK - Lets Proxy the Willy Weather API 
+**Note:**
+API Keys are available at: [https://www.willyweather.com.au/account/login.htm]
 
 ```
 $ ./startProxy.sh 9000 https://api.willyweather.com.au/v2 &
