@@ -43,6 +43,11 @@ choco install jq
 ### Sample Proxy Session
 
 First, for convenience, setup the API Key in the local environment
+
+**Note:**
+
+API Keys are available at: [https://www.willyweather.com.au/info/api.html]
+
 ```
 $ ./setAPIKeyEnv.sh 
 ```
@@ -84,8 +89,7 @@ $ ./startProxy.sh
 ```
 
 OK - Lets Proxy the Willy Weather API 
-**Note:**
-API Keys are available at: [https://www.willyweather.com.au/info/api.html]
+
 
 ```
 $ ./startProxy.sh 9000 https://api.willyweather.com.au/v2 &
@@ -125,6 +129,15 @@ verbose:                      false
 ```
 
 And finally, get a weather forecast...
+
+The following script uses curl to make a HTTP GET request to the Wiremock Server on localhost:9000.
+
+Wiremock then:
+
+- records the request URL in its mappings folder.
+- forwards the request on to the Cloud API at WillyWeather
+- records the response content returned from the service under __files/
+- adds the response file refence in the mappings JSON file.
 
 ```
 $ ./getProxiedRain.sh 
@@ -181,6 +194,55 @@ total 24
 If the Wiremock Server is re-started without the proxying switches, it will serve those content files to new API requests:
 
 ```
-$ ./wiremock.sh
+$ ./wiremock.sh 9000
+Starting wiremock on port: 9000...
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2019-04-04 22:04:42.080 Verbose logging enabled
+ /$$      /$$ /$$                     /$$      /$$                     /$$      
+| $$  /$ | $$|__/                    | $$$    /$$$                    | $$      
+| $$ /$$$| $$ /$$  /$$$$$$   /$$$$$$ | $$$$  /$$$$  /$$$$$$   /$$$$$$$| $$   /$$
+| $$/$$ $$ $$| $$ /$$__  $$ /$$__  $$| $$ $$/$$ $$ /$$__  $$ /$$_____/| $$  /$$/
+| $$$$_  $$$$| $$| $$  \__/| $$$$$$$$| $$  $$$| $$| $$  \ $$| $$      | $$$$$$/ 
+| $$$/ \  $$$| $$| $$      | $$_____/| $$\  $ | $$| $$  | $$| $$      | $$_  $$ 
+| $$/   \  $$| $$| $$      |  $$$$$$$| $$ \/  | $$|  $$$$$$/|  $$$$$$$| $$ \  $$
+|__/     \__/|__/|__/       \_______/|__/     |__/ \______/  \_______/|__/  \__/
+
+port:                         9000
+enable-browser-proxying:      false
+disable-banner:               false
+no-request-journal:           false
+verbose:                      false
+
+
+....
+Registered mappings:
+....
+{
+  "mappings": [
+    {
+      "id": "8d29f4a0-f4fd-3043-82f9-dfa132392887",
+      "request": {
+        "url": "/locations/2251/weather.json?forecasts=rainfallprobability&days=5&startDate=2017-03-27",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "bodyFileName": "body-2251-weather.json-pPHJl.json",
+        "headers": {
+          "Date": "Thu, 04 Apr 2019 08:41:38 GMT",
+          "Content-Type": "application/json",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Server": "Apache/2.4.33 (IUS)",
+          "X-Powered-By": "PHP/7.0.32",
+          "Cache-Control": "no-cache",
+          "Vary": "Accept-Encoding,User-Agent"
+        }
+      },
+      "uuid": "8d29f4a0-f4fd-3043-82f9-dfa132392887"
+    },
+....
 
 ```
