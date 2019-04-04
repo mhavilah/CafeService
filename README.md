@@ -39,6 +39,9 @@ For Windows, Chocolately installer is recommended (https://chocolatey.org/).
 choco install jq
 ```
 
+### Proxying Request Sequence
+
+!(https://github.com/mhavilah/CafeService/docs/Wiremock-proxying-seq.png)
 
 ### Sample Proxy Session
 
