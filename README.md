@@ -7,10 +7,6 @@ TODO TODO
 
 ## Wiremock Proxy Example
 
-
-
-### Sample Proxy Session
-
 The following illustrates the use of the Wiremock Proxy with a cloud based API
 at WilyWeather (www.wilyweather.com.au).
 
@@ -43,6 +39,8 @@ For Windows, Chocolately installer is recommended (https://chocolatey.org/).
 choco install jq
 ```
 
+
+### Sample Proxy Session
 
 First, for convenience, setup the API Key in the local environment
 ```
