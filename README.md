@@ -2,7 +2,7 @@
 A Demo of using Wiremock API mocks - in a Cafe
 
 ### Presentation
-<a href="https://mhavilah.github.io/cafeService/" style="font-style:normal;font-weight:bold">
+<a href="https://mhavilah.github.io/CafeService/index.html" style="font-style:normal;font-weight:bold">
   <img src="docs/Wiremock-APITesting-cover.jpg" width="188" height="125" alt="WireMock API Testing"/>
   <p>WireMock API Testing [PDF]</p>
 </a>
