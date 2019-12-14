@@ -1,16 +1,56 @@
 # CafeService
 A Demo of using Wiremock API mocks - in a Cafe
 
+### Presentation
+<a href="https://mhavilah.github.io/cafeService/" style="font-style:normal;font-weight:bold">
+  <img src="docs/Wiremock-APITesting-cover.jpg" width="188" height="125" alt="WireMock API Testing"/>
+  <p>WireMock API Testing [PDF]</p>
+</a>
+
 ## Wiremock Standalone API Example
 
-TODO TODO
+Wiremock is an API mocking utility written in Java.
+
+It is commonly invoked as an embedded Server within JUnit/TestNG tests.
+
+An alternate mode of usage is to invoke the API mocks as a standalone server.  
+
+This style of usage can be good for:
+
+- demonstration of a server-based application independently of its downstream API service providers
+  - an example may be running an application offline 
+- testing an application with a proposed or non-existent API implementation
+  -	 for example - with a newer API version
+- demonstration of a client side application without a corresponding running server	
+ 
+### Configuration 
+ 
+When run as a standalone server, Wiremock uses configuration files to define its behaviour:
+
+- API path mapping rules 
+  - (under: %WIREMOCK_HOME%/mappings/)
+- Content definitions/files 
+  - (under: %WIREMOCK_HOME%/__files/)
+
+where: %WIREMOCK_HOME% is where the wiremock.jar application bundle is installed.
+
+The contents of these files will be explained further below. 
+
 
 ## Wiremock Proxy Example
 
-The following illustrates the use of the Wiremock Proxy with a cloud based API
-at WillyWeather (www.willyweather.com.au).
+When run as a proxy in front of an existing API implementation, Wiremock can record request/response interactions.  These recordings can then be "played-back", mocking the actual API service implementation.
+
+### Proxying Request Sequence
+
+![Proxying Sequence](docs/Wiremock-proxying-seq.png?raw=true "Wiremock Proxying")
+
+### WillyWeather API example
+
+The following illustrates the use of the Wiremock Proxy with a cloud based API at WillyWeather (www.willyweather.com.au).
 
 Some helper scripts have been provided to:
+
 - setup the API Key in the local environment
 - start the Wiremock Proxy for the target API
 - run a simple weather API request to the service
@@ -38,10 +78,6 @@ For Windows, Chocolately installer is recommended (https://chocolatey.org/).
 ```
 choco install jq
 ```
-
-### Proxying Request Sequence
-
-![Proxying Sequence](docs/Wiremock-proxying-seq.png?raw=true "Wiremock Proxying")
 
 ### Sample Proxy Session
 
@@ -175,11 +211,13 @@ $
 
 #### Mapping/Content Files
 
-Wiremock will save the API requests and the intercepted API responses in the following folders:
+Wiremock will record and save the API requests and the intercepted API responses in the following folders:
 
 - mappings
+  - request URL and header meta-data  
 - __files
-
+  - request/response body content
+  
 ```
 $ ls -l mappings
 total 16
